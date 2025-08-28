@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root {
+  --primary-color: #255F6A; --secondary-color: #2A2A2A; --accent-color: #EAE7DC; --highlight-color: #D4AF37; --background-color: #1E1E1E; --card-bg-color: #2A2A2A; --text-color: #EAE7DC;
+}
+body { font-family: 'Poppins', sans-serif; color: var(--text-color); background-color: var(--background-color); }
+h1 { font-weight: 700; color: var(--text-color); }
+.navbar { background-color: var(--secondary-color); border-bottom: 2px solid var(--primary-color); }
+.navbar-brand { font-weight: 700; color: var(--highlight-color) !important; }
+.nav-link { position: relative; padding-bottom: 8px; }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background-color: var(--highlight-color); transition: width 0.3s ease; }
+.nav-link:hover::after, .nav-link.active::after { width: 50%; }
+.nav-link:hover, .nav-link.active { color: var(--highlight-color) !important; }
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); color: var(--text-color); font-weight: 600; transition: all 0.3s ease; }
+.btn-primary:hover { background-color: var(--highlight-color); border-color: var(--highlight-color); color: var(--secondary-color); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); }
+.btn-filter { background-color: #3a3a3a; border: 1px solid #555; color: var(--text-color); transition: all 0.3s ease; }
+.btn-filter:hover { background-color: #4a4a4a; }
+.btn-filter.active { background-color: var(--primary-color); color: var(--text-color); border-color: var(--primary-color); box-shadow: 0 0 10px rgba(37, 95, 106, 0.5); }
+.schedule-table { border-color: #3a3a3a; }
+.schedule-table thead { color: var(--highlight-color); }
+.schedule-table td { padding: 1rem 0.5rem; vertical-align: middle; transition: opacity 0.4s ease-in-out; border-color: #3a3a3a; }
+.schedule-table td[data-class]:hover { background-color: rgba(255,255,255,0.05); cursor: pointer; }
+.schedule-table .class-weights { border-left: 3px solid var(--primary-color); }
+.schedule-table .class-cardio { border-left: 3px solid #ff6b6b; }
+.schedule-table .class-yoga { border-left: 3px solid #48dbfb; }
+.schedule-table .class-hiit { border-left: 3px solid var(--highlight-color); }
+.schedule-table td.filtered-out { opacity: 0.15; }
+footer { background-color: var(--secondary-color); }
